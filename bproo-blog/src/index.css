@@ -74,6 +74,12 @@
   -moz-box-shadow:    1px 2px 4px 1px rgba(119, 119, 119, 0.7);
   box-shadow:         1px 2px 4px 1px rgba(119, 119, 119, 0.7);
   border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+
+.blog:hover{
+  box-shadow:#5c5b5b ;
 }
 
 .blog-publication-date{
