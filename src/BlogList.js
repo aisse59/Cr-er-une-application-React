@@ -1,4 +1,4 @@
-const BlogList = ({blogs,title,HandleDelete}) => {
+const BlogList = ({blogs,title}) => {
 
     
 
@@ -11,7 +11,7 @@ const BlogList = ({blogs,title,HandleDelete}) => {
           <a href="" className="blog-titre">{blog.title}</a>
           <small className="blog-publication-date">Publir par :{blog.date}</small>
           <p className="blog-author">Publier par :{blog.author}</p>
-         <button onClick={()=> HandleDelete(blog.id)}>supprimer article</button>
+        
             </div> 
             ))
            }

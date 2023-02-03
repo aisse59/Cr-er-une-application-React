@@ -7,18 +7,15 @@ const Home = () => {
  
    
 
- const HandleDelete = (id)=> {
-    const newBlogs =  blogs.filter((blog)=> blog.id !== id);
-    setBlog(newBlogs);
-  }
 
   useEffect(()=> {
-    fetch('  http://localhost:3000/blogs')
+    fetch('http://localhost:3000/blogs')
     .then((response) => {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
+      
+      setBlog(data);
     })
   },[]);
  
@@ -26,8 +23,7 @@ const Home = () => {
 
     return ( 
         <div className="home">
-         <BlogList blogs={blogs} title={'Liste des blogs'} HandleDelete={HandleDelete}/>
-        
+          { blogs && <BlogList blogs={blogs} title={'Liste des blogs'} />  }
         </div>
      );
 }
