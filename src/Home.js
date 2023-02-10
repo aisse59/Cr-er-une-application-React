@@ -4,7 +4,7 @@ import useRecuperation from "./UseRecuperation";
 
 const Home = () => {
     
-    const {data: blogs,isLoading,error} = useRecuperation('http://localhost:8000/blogs');
+    const {data: blogs,isLoading,error} = useRecuperation('http://localhost:8000/blogs?_sort=id&_order=desc');
     return ( 
         <div className="home">
           { error && <div style={{'color':'red'}}>{error}</div> }
